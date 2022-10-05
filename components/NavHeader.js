@@ -47,7 +47,7 @@ function NavHeader() {
               color='purple.300'
               fontWeight='semibold'
               fontSize={["lg", "lg", "xl"]}>
-              CodMat
+              CodeMat
             </Text>
             <Text
               color='white'
