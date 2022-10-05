@@ -3,7 +3,7 @@ import { projects } from "../databank/projectData";
 import CuratedProjectsCard from "./CuratedProjectsCard";
 
 function CuratedProjects() {
- const bg = useColorModeValue("purple.100", "");
+ const bg = useColorModeValue("purple.50", "");
  const color = useColorModeValue("purple.900", "");
 
   return (

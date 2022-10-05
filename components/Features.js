@@ -3,7 +3,7 @@ import { features } from "../databank/featuresData";
 import FeaturesCard from "./FeaturesCard";
 
 function Features() {
-  const bg = useColorModeValue("purple.100", "");
+  const bg = useColorModeValue("purple.50", "");
  const color = useColorModeValue("purple.900", "");
 
   return (

@@ -72,7 +72,7 @@ function HeroSection() {
           maxW='xs'
           mx={["auto", "auto", 0]}
           textAlign={["center", "center", "start"]}
-          color='purple.200'>
+          color='gray.200'>
           Come experience SATISFACTION with our software solutions.
         </Text>
         <Flex mt='6' justify={["center", "center", "start"]}>

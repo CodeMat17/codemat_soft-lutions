@@ -16,7 +16,7 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 function ContactUs() {
-  const bg = useColorModeValue("purple.100", "");
+  const bg = useColorModeValue("purple.50", "");
   const formBg = useColorModeValue("purple.900", "gray.700");
   const color = useColorModeValue("purple.900", "");
   const formColor = useColorModeValue("purple.300", "gray.300");

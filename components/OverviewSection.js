@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 
 function OverviewSection() {
-  const bg = useColorModeValue('purple.100', '')
+  const bg = useColorModeValue('purple.50', '')
   const color = useColorModeValue("purple.900", "");
 
   return (

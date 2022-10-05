@@ -2,7 +2,7 @@ import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 
 function CuratedProjectsCard({ title, alt, image, desc }) {
-   const bg = useColorModeValue("purple.50", "gray.700");
+   const bg = useColorModeValue("gray.100", "gray.700");
    const color = useColorModeValue("purple.900", "");
   
   return (
