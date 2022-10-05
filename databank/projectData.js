@@ -1,0 +1,30 @@
+export const projects = [
+  {
+    id: 1,
+    title: "JOTTA",
+    alt: "jotta img",
+    image: "/project-1.webp",
+    desc: "JOTTA is an e-note collector application.",
+  },
+  {
+    id: 2,
+    title: "BUY HERE",
+    alt: "Buy here img",
+    image: "/project-2.webp",
+    desc: "BUY HERE is an e-commerce website.",
+  },
+  {
+    id: 3,
+    title: "COOP-PAY",
+    alt: "coop pay img",
+    image: "/project-3.webp",
+    desc: "COOP-PAY is a payday loan app for an organization.",
+  },
+  {
+    id: 4,
+    title: "PROFILE WEBSITE",
+    alt: "profile landing site",
+    image: "/project-4.webp",
+    desc: "PROFILE WEBSITE is an individual profile website.",
+  },
+];
