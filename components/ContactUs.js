@@ -47,7 +47,7 @@ function ContactUs() {
         },
         (error) => {
           toast({
-            title: "DONE!",
+            title: "Error!",
             description: error.text,
             status: "error",
             duration: 9000,
@@ -94,6 +94,7 @@ function ContactUs() {
             <FormLabel>Phone No.</FormLabel>
             <Input
               name='user_phone'
+              type='tel'
               w='100%'
               placeholder='Enter your phone no. here'
             />
@@ -128,7 +129,7 @@ function ContactUs() {
             loadingText='Sending...'
             w='100%'
             colorScheme='purple'>
-            SEND
+            {isLoading ? 'SENDING...' : 'SEND'}
           </Button>
         </chakra.form>
       </Container>
