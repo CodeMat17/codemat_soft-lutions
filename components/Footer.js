@@ -1,5 +1,14 @@
-import { Box, Divider, Flex, HStack, IconButton, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  HStack,
+  IconButton,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { BsTwitter, BsWhatsapp } from "react-icons/bs";
 import { FiInstagram, FiPhoneCall } from "react-icons/fi";
 import { GrFacebookOption } from "react-icons/gr";
@@ -9,7 +18,11 @@ function Footer() {
   return (
     <Box bg='purple.900' pt='12' pb='6' w='100%'>
       <Box maxW='6xl' mx='auto'>
-        <Flex flexDir={["column", 'row']} align='' justify='space-between' mr='4'>
+        <Flex
+          flexDir={["column", "row"]}
+          align=''
+          justify='space-between'
+          mr='4'>
           {/* Connect with us */}
           <Box>
             <VStack align='start' spacing='0'>
@@ -17,20 +30,30 @@ function Footer() {
                 Connect With Us
               </Text>
               <HStack spacing='2' pr='4'>
-                <IconButton
-                  _hover={{ bg: "purple.800" }}
-                  icon={<GrFacebookOption size={25} />}
-                  variant='ghost'
-                  color='facebook.200'
-                  isRound={true}
-                />
-                <IconButton
-                  _hover={{ bg: "purple.800" }}
-                  icon={<BsTwitter size={25} />}
-                  variant='ghost'
-                  color='twitter.500'
-                  isRound={true}
-                />
+                <Link href='https://web.facebook.com/profile.php?id=100086147005828'>
+                  <a>
+                    <IconButton
+                      _hover={{ bg: "purple.800" }}
+                      icon={<GrFacebookOption size={25} />}
+                      variant='ghost'
+                      color='facebook.200'
+                      isRound={true}
+                    />
+                  </a>
+                </Link>
+
+                <Link href='https://twitter.com/Soft_lutions'>
+                  <a>
+                    <IconButton
+                      _hover={{ bg: "purple.800" }}
+                      icon={<BsTwitter size={25} />}
+                      variant='ghost'
+                      color='twitter.500'
+                      isRound={true}
+                    />
+                  </a>
+                </Link>
+
                 <IconButton
                   _hover={{ bg: "purple.800" }}
                   icon={<FiInstagram color='red' size='25' />}
