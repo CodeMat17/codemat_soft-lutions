@@ -29,6 +29,8 @@ function NavHeader() {
       <Flex maxW='6xl' mx='auto' align='center' justify='space-between'>
         <HStack>
           <Box
+            as='a'
+            href='/'
             position='relative'
             w='50px'
             h='50px'
@@ -42,7 +44,7 @@ function NavHeader() {
               layout='fill'
             />
           </Box>
-          <VStack spacing='-1' align='start'>
+          <VStack as='a' href='/' spacing='-1' align='start'>
             <Text
               color='purple.300'
               fontWeight='semibold'

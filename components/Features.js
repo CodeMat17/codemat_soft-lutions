@@ -1,4 +1,4 @@
-import { Box, Container, Heading, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
+import { Box, Text, Heading, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import { features } from "../databank/featuresData";
 import FeaturesCard from "./FeaturesCard";
 
@@ -11,6 +11,9 @@ function Features() {
       <Heading textAlign='center' size='xl' color={color}>
         FEATURES
       </Heading>
+      <Text textAlign='center' size='xl' color={color}>
+        WHY YOU NEED A WEBSITE.
+      </Text>
       <Box mt='4' maxW='6xl' mx='auto'>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing='40px'>
           {features.map((feature) => (
