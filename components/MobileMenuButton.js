@@ -1,21 +1,26 @@
 import {
   Box,
-  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
   DrawerOverlay,
+  HStack,
   IconButton,
+  Text,
+  useColorModeValue,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { useRef } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { links } from "../databank/navLinks";
 
 function MobileMenuButton() {
+  const bg = useColorModeValue("gray.200", "gray.600");
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
@@ -45,7 +50,7 @@ function MobileMenuButton() {
           <DrawerCloseButton />
           {/* <DrawerHeader>Heading</DrawerHeader> */}
           <DrawerBody>
-            <VStack pt='24'>
+            <VStack pt='24' w='100%' align='normal'>
               {links.map((link) => (
                 <Link
                   key={link.id}
@@ -54,9 +59,22 @@ function MobileMenuButton() {
                   smooth={link.smooth}
                   offset={link.offset}
                   duration={link.duration}>
-                  <Button onClick={HomeBtn} w='100%' variant='ghost' mb='2'>
-                    {link.item}
-                  </Button>
+                  <HStack
+                    align='center'
+                    _hover={{ bg }}
+                    as='button'
+                    w='100%'
+                    spacing='4'
+                    py='2'
+                    px='4'
+                    rounded='md'
+                    onClick={HomeBtn}>
+                    <Image src={link.icon} width={20} height={20} priority />
+
+                    <Text fontWeight='semibold' letterSpacing='2px'>
+                      {link.item}
+                    </Text>
+                  </HStack>
                 </Link>
               ))}
             </VStack>

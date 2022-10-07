@@ -7,6 +7,7 @@ export const links = [
     smooth: true,
     offset: -80,
     duration: 500,
+    icon: '/svg/home.svg'
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const links = [
     smooth: true,
     offset: -80,
     duration: 500,
+    icon: '/svg/apps.svg'
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const links = [
     smooth: true,
     offset: -80,
     duration: 500,
+    icon: '/svg/list-check.svg'
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const links = [
     smooth: true,
     offset: -80,
     duration: 500,
+    icon: '/svg/bulb.svg'
   },
   {
     id: 5,
@@ -43,5 +47,6 @@ export const links = [
     smooth: true,
     offset: -80,
     duration: 500,
+    icon: '/svg/megaphone.svg'
   },
 ];
