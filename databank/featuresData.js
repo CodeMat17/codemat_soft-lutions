@@ -21,7 +21,7 @@ export const features = [
     svg: "/seo.svg",
     title: "Advertising",
     content:
-      "A website like ours with perfect Search Engine Optimisation, SEO, increases the awareness and visibility of your goods and/or services to a wide range of clients a million times faster than with the traditional offline advertising methods.",
+      "A website like ours with perfect Search Engine Optimization, SEO, increases the awareness and visibility of your goods and/or services to a wide range of clients a million times faster than with the traditional offline advertising methods.",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const features = [
     svg: "/competition.svg",
     title: "Competition",
     content:
-      "If you do not have a website for your goods and/or services, it is likely that your competitor does, that means that you are missing out on gaining new customers and your competitor with more customers will definately gain more than you do.",
+      "If you do not have a website for your goods and/or services, it is likely that your competitor does, that means that you are missing out on gaining new customers and your competitor with more customers will definitely gain more than you do.",
   },
   {
     id: 5,

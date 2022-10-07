@@ -3,6 +3,8 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { FaChevronCircleUp } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { WhatsAppWidget } from "react-whatsapp-widget";
+import "react-whatsapp-widget/dist/index.css";
 import ContactUs from "../components/ContactUs";
 import CuratedProjects from "../components/CuratedProjects";
 import Features from "../components/Features";
@@ -41,9 +43,15 @@ export default function Home() {
         <CuratedProjects />
         <ContactUs />
         <Footer />
+
+        <WhatsAppWidget
+          companyName='CodeMat Soft-lutions'
+          phoneNumber='2348063856120'
+        />
+
         {scrollPosition > 500 && (
           <Link to='home' spy={true} smooth={true} offset={-80} duration={500}>
-            <Box pos='fixed' bottom='20px' right={["16px", "84px"]} zIndex={1}>
+            <Box pos='fixed' bottom='90px' right={["24px", "84px"]} zIndex={1}>
               <IconButton
                 icon={<FaChevronCircleUp size={40} />}
                 colorScheme='purple'
