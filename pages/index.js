@@ -44,10 +44,10 @@ export default function Home() {
         <ContactUs />
         <Footer />
 
-        <WhatsAppWidget
+        {/* <WhatsAppWidget
           companyName='CodeMat Soft-lutions'
           phoneNumber='2348063856120'
-        />
+        /> */}
 
         {scrollPosition > 500 && (
           <Link to='home' spy={true} smooth={true} offset={-80} duration={500}>
