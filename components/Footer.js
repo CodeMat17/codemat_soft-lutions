@@ -54,19 +54,28 @@ function Footer() {
                   </a>
                 </Link>
 
-                <IconButton
-                  _hover={{ bg: "purple.800" }}
-                  icon={<FiInstagram color='red' size='25' />}
-                  variant='ghost'
-                  isRound={true}
-                />
-                <IconButton
-                  _hover={{ bg: "purple.800" }}
-                  icon={<BsWhatsapp size='25' />}
-                  variant='ghost'
-                  color='whatsapp.500'
-                  isRound={true}
-                />
+                <Link href='https://www.instagram.com/soft_lutions/'>
+                  <a>
+                    <IconButton
+                      _hover={{ bg: "purple.800" }}
+                      icon={<FiInstagram color='red' size='25' />}
+                      variant='ghost'
+                      isRound={true}
+                    />
+                  </a>
+                </Link>
+
+                <Link href='https://wa.me/08063856120'>
+                  <a>
+                    <IconButton
+                      _hover={{ bg: "purple.800" }}
+                      icon={<BsWhatsapp size='25' />}
+                      variant='ghost'
+                      color='whatsapp.500'
+                      isRound={true}
+                    />
+                  </a>
+                </Link>
               </HStack>
               <VStack align='start' spacing='0' px='4' pt='8' color='gray.400'>
                 <HStack>
