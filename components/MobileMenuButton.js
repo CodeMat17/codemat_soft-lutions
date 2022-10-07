@@ -63,6 +63,7 @@ function MobileMenuButton() {
                     align='center'
                     _hover={{ bg }}
                     as='button'
+                    mb='2'
                     w='100%'
                     spacing='4'
                     py='2'
@@ -71,7 +72,10 @@ function MobileMenuButton() {
                     onClick={HomeBtn}>
                     <Image src={link.icon} width={20} height={20} priority />
 
-                    <Text fontWeight='semibold' letterSpacing='2px'>
+                    <Text
+                      fontWeight='semibold'
+                      fontSize='23'
+                      letterSpacing='2px'>
                       {link.item}
                     </Text>
                   </HStack>
