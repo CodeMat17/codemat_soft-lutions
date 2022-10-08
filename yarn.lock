@@ -2849,6 +2849,11 @@ react-fast-compare@3.2.0:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
+react-floating-whatsapp@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-floating-whatsapp/-/react-floating-whatsapp-5.0.4.tgz#dcff1473ab991e723c50a59ded316377b71cfd64"
+  integrity sha512-IClsRQG8jZmaSuKecA4f8ulYjKpPltKuT2Y9v2z73GohKFXRn6ekcdhsbW/7poD6mp3tYa7KLjh/TqLksdBJqw==
+
 react-focus-lock@^2.9.1:
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.9.1.tgz#094cfc19b4f334122c73bb0bff65d77a0c92dd16"
@@ -2906,13 +2911,6 @@ react-style-singleton@^2.2.1:
     get-nonce "^1.0.0"
     invariant "^2.2.4"
     tslib "^2.0.0"
-
-react-whatsapp-widget@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-whatsapp-widget/-/react-whatsapp-widget-2.1.0.tgz#e4d56ad744c35e3536f673ee84c62a5bb55df9a4"
-  integrity sha512-ilrA0axcs/h0xYZj2CtVoOt9DCFqtGpkFXm22vvht0+tw8tbF3lGIkO0+AVyFpgGa7suhO8Ss7dlm9D+9yzpHg==
-  dependencies:
-    react-icons "^4.4.0"
 
 react@18.2.0:
   version "18.2.0"

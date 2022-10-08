@@ -1,10 +1,10 @@
-import { Box, IconButton } from "@chakra-ui/react";
+import { Box, IconButton, VStack } from "@chakra-ui/react";
 import Head from "next/head";
+import NextLink from "next/link";
 import { useEffect, useState } from "react";
 import { FaChevronCircleUp } from "react-icons/fa";
+import { SiWhatsapp } from "react-icons/si";
 import { Link } from "react-scroll";
-import { WhatsAppWidget } from "react-whatsapp-widget";
-import "react-whatsapp-widget/dist/index.css";
 import ContactUs from "../components/ContactUs";
 import CuratedProjects from "../components/CuratedProjects";
 import Features from "../components/Features";
@@ -44,21 +44,45 @@ export default function Home() {
         <ContactUs />
         <Footer />
 
-        {/* <WhatsAppWidget
-          companyName='CodeMat Soft-lutions'
-          phoneNumber='2348063856120'
-        /> */}
+        <VStack
+          // border='1px'
+          p='2'
+          bg='green'
+          rounded='full'
+          pos='fixed'
+          bottom={scrollPosition > 500 ? "85px" : "20px"}
+          right={["16px", "84px"]}
+          zIndex={1}>
+          <NextLink href='https://wa.link/eum8im'>
+            {/* <NextLink href='https://wa.me/+2348063856120?text=Welcome!'> */}
+            {/* https://wa.link/eum8im */}
+            <IconButton
+              icon={<SiWhatsapp size={40} />}
+              bg='green'
+              isRound={true}
+              shadow='dark-lg'
+            />
+          </NextLink>
+        </VStack>
 
         {scrollPosition > 500 && (
           <Link to='home' spy={true} smooth={true} offset={-80} duration={500}>
-            <Box pos='fixed' bottom='90px' right={["24px", "84px"]} zIndex={1}>
+            <VStack
+              p='2'
+              bg='purple.700'
+              rounded='full'
+              pos='fixed'
+              bottom='20px'
+              right={["16px", "84px"]}
+              zIndex={1}>
               <IconButton
+                // size='lg'
                 icon={<FaChevronCircleUp size={40} />}
                 colorScheme='purple'
                 isRound={true}
                 shadow='dark-lg'
               />
-            </Box>
+            </VStack>
           </Link>
         )}
       </Box>

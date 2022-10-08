@@ -1,31 +1,31 @@
 {
-  "name": "soft-lutions",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@chakra-ui/react": "^2.3.4",
-    "@emailjs/browser": "^3.7.0",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@fontsource/open-sans": "^4.5.11",
-    "@fontsource/raleway": "^4.5.10",
-    "framer-motion": "^6",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "react-scroll": "^1.8.7",
-    "react-whatsapp-widget": "^2.1.0",
-    "sharp": "^0.31.1"
-  },
-  "devDependencies": {
-    "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
-  }
+    "name": "soft-lutions",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@chakra-ui/react": "^2.3.4",
+        "@emailjs/browser": "^3.7.0",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
+        "@fontsource/open-sans": "^4.5.11",
+        "@fontsource/raleway": "^4.5.10",
+        "framer-motion": "^6",
+        "next": "12.3.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-floating-whatsapp": "^5.0.4",
+        "react-icons": "^4.4.0",
+        "react-scroll": "^1.8.7",
+        "sharp": "^0.31.1"
+    },
+    "devDependencies": {
+        "eslint": "8.24.0",
+        "eslint-config-next": "12.3.1"
+    }
 }
