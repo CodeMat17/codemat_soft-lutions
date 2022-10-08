@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 
 function OverviewSection() {
-  const bg = useColorModeValue('purple.50', '')
+  const bg = useColorModeValue("purple.50", "");
   const color = useColorModeValue("purple.900", "");
 
   return (
@@ -34,14 +34,14 @@ function OverviewSection() {
               textAlign={["center", "center", "left"]}
               maxW={["xl", "sm", "lg", "xl"]}
               mx='auto'>
-              It is on you to accept the fact that marketing has done digital,
+              It is on you to accept the fact that marketing has gone digital,
               where you reach millions of your targeted clients world wide
-              within few minutes but it is on us at CODEMAT SOFT-LUTIONS to help
-              you bring it to life satisfactorily. We pay 100% attention to SEO
-              to ensure that your goods and/or services are very visible to
-              potential clients, investors, etc. We guarantee you of increased
-              website traffic with our proven strategies and heart-to-heart
-              customer-client conversations.
+              within minutes. Our business at CODEMAT SOFT-LUTIONS is to help you
+              create solutions that will bring your businesses to life
+              satisfactorily. We pay 100% attention to SEO to ensure that your
+              goods and/or services are visible to potential clients, investors,
+              etc. We guarantee you of increased website traffic with our proven
+              strategies and heart-to-heart customer-client conversations.
             </Text>
           </Box>
         </Flex>
