@@ -53,8 +53,8 @@ export default function Home() {
           bottom={scrollPosition > 500 ? "85px" : "20px"}
           right={["16px", "84px"]}
           zIndex={1}>
-          <NextLink href='https://wa.link/eum8im'>
-            {/* <NextLink href='https://wa.me/+2348063856120?text=Welcome!'> */}
+          {/* <NextLink href='https://wa.link/eum8im'> */}
+            <NextLink href='https://wa.me/+2348063856120?text=Welcome!'>
             {/* https://wa.link/eum8im */}
             <IconButton
               icon={<SiWhatsapp size={40} />}
