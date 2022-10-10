@@ -6,7 +6,7 @@ const handler = async (req, res) => {
   await res.revalidate("/blog");
 
   const pathToRevalidate = `/blog/${
-    req.body?.blogPost?.id || req.body?.old_blogPost.id
+    req.body?.record?.id || req.body?.old_record?.id
   }`;
   await res.revalidate(pathToRevalidate);
 

@@ -99,7 +99,7 @@ function Footer() {
             mt={[6, null, null]}>
             <Image
               alt='logo'
-              src='/logo.png'
+              src='/logo.webp'
               layout='fill'
               objectFit='contain'
             />
