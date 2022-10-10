@@ -59,26 +59,25 @@ function NavHeader() {
         <HStack spacing='4'>
           <ColorModeBtn />
           <Box display={{ sm: "none" }}>
-         
             <IconButton
+              onClick={() => router.back()}
               icon={<FaChevronLeft />}
               isRound
               variant='outline'
               color='gray.400'
             />
           </Box>
-          <Box display={{base: 'none', sm: 'flex'}}>
-             <Button
-            onClick={() => router.back()}
-            leftIcon={<FaChevronLeft />}
-            color='gray.400'
-            bg={bg}
-            variant='outline'
-            rounded='full'>
-            Back
-          </Button>
-</Box>
-         
+          <Box display={{ base: "none", sm: "flex" }}>
+            <Button
+              onClick={() => router.back()}
+              leftIcon={<FaChevronLeft />}
+              color='gray.400'
+              bg={bg}
+              variant='outline'
+              rounded='full'>
+              Back
+            </Button>
+          </Box>
         </HStack>
       </Flex>
     </Box>
