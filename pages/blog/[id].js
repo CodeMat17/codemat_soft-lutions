@@ -34,7 +34,7 @@ function BlogDetail({ blogPost }) {
             <Text>-</Text>
             <Text>{dayjs(blogPost?.created_at).fromNow()}</Text>
           </HStack>
-          <ReactMarkdown children={blogPost?.content} />
+          <ReactMarkdown>{blogPost?.content}</ReactMarkdown>
         </Box>
         <BlogSocialLinks />
       </HStack>

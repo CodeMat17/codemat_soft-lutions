@@ -22,7 +22,6 @@ function BlogCard({ title, content, created_at }) {
         {title}
       </Text>
       <Text color={color} mt='2' noOfLines='3' fontSize='lg' maxW='xl'>{ content}</Text>
-      {/* <chakra.ReactMarkdown children={content} /> */}
       <HStack fontSize='sm' color='gray' spacing='2' mt='2'>
         <Icon as={HiOutlineNewspaper} />
         <Text>Published {dayjs(created_at).format("MMM D, YYYY")}</Text>
