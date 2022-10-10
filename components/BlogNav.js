@@ -1,25 +1,44 @@
 import {
   Box,
   Button,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
   Flex,
   Highlight,
   HStack,
+  Icon,
   IconButton,
   Text,
   useColorModeValue,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useRef } from "react";
 import { FaChevronLeft } from "react-icons/fa";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { ImBlog } from "react-icons/im";
+import BlogDesktopMenu from "./BlogDesktopMenu";
+import BlogMobileMenu from "./BlogMobileMenu";
 import ColorModeBtn from "./ColorModeBtn";
 
 function NavHeader() {
   const router = useRouter();
+ const { isOpen, onOpen, onClose } = useDisclosure();
+  const ref = useRef();
+  
   const bg = useColorModeValue("purple.900", "gray.800");
 
+   const closeDrawerBtn = () => {
+     onClose();
+   };
+
   return (
-    <Box as='nav' bg={bg} px='4' py='3' position='sticky' top='0' zIndex='60'>
+    <Box as='nav' bg={bg} pl='4' pr='2' py='3' position='sticky' top='0' zIndex='60'>
       <Flex maxW='6xl' mx='auto' align='center' justify='space-between'>
         <HStack>
           <Box
@@ -58,26 +77,8 @@ function NavHeader() {
 
         <HStack spacing='4'>
           <ColorModeBtn />
-          <Box display={{ sm: "none" }}>
-            <IconButton
-              onClick={() => router.back()}
-              icon={<FaChevronLeft />}
-              isRound
-              variant='outline'
-              color='gray.400'
-            />
-          </Box>
-          <Box display={{ base: "none", sm: "flex" }}>
-            <Button
-              onClick={() => router.back()}
-              leftIcon={<FaChevronLeft />}
-              color='gray.400'
-              bg={bg}
-              variant='outline'
-              rounded='full'>
-              Back
-            </Button>
-          </Box>
+          <BlogMobileMenu />
+          <BlogDesktopMenu />
         </HStack>
       </Flex>
     </Box>

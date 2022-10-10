@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   HStack,
   IconButton,
   Text,
@@ -79,14 +78,6 @@ function BlogSocialLinks() {
             </a>
           </Link>
         </HStack>
-        <Box pt='1'>
-          <Button
-            onClick={() => router.push("/")}
-            colorScheme='purple'
-            w='100%'>
-            GO TO HOME PAGE
-          </Button>
-        </Box>
       </VStack>
     </Box>
   );

@@ -14,15 +14,15 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useRef } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { ImBlog } from "react-icons/im";
 import { Link } from "react-scroll";
 import { links } from "../databank/navLinks";
-import { useRouter } from "next/router";
 
 function MobileMenuButton() {
-  const router = useRouter()
+  const router = useRouter();
   const bg = useColorModeValue("gray.200", "gray.600");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -33,9 +33,9 @@ function MobileMenuButton() {
   };
 
   const blogBtn = () => {
-     router.push('/blog')
-     onClose();
-   };
+    router.push("/blog");
+    onClose();
+  };
 
   return (
     <Box display={{ md: "none" }}>
