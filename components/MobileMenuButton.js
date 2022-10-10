@@ -6,6 +6,7 @@ import {
   DrawerContent,
   DrawerOverlay,
   HStack,
+  Icon,
   IconButton,
   Text,
   useColorModeValue,
@@ -15,18 +16,26 @@ import {
 import Image from "next/image";
 import { useRef } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { ImBlog } from "react-icons/im";
 import { Link } from "react-scroll";
 import { links } from "../databank/navLinks";
+import { useRouter } from "next/router";
 
 function MobileMenuButton() {
+  const router = useRouter()
   const bg = useColorModeValue("gray.200", "gray.600");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
-  const HomeBtn = () => {
+  const homeBtn = () => {
     onClose();
   };
+
+  const blogBtn = () => {
+     router.push('/blog')
+     onClose();
+   };
 
   return (
     <Box display={{ md: "none" }}>
@@ -69,7 +78,7 @@ function MobileMenuButton() {
                     py='2'
                     px='4'
                     rounded='md'
-                    onClick={HomeBtn}>
+                    onClick={homeBtn}>
                     <Image src={link.icon} width={20} height={20} priority />
 
                     <Text
@@ -81,6 +90,23 @@ function MobileMenuButton() {
                   </HStack>
                 </Link>
               ))}
+
+              <HStack
+                align='center'
+                _hover={{ bg }}
+                as='button'
+                mb='2'
+                w='100%'
+                spacing='4'
+                py='2'
+                px='4'
+                rounded='md'
+                onClick={blogBtn}>
+                <Icon as={ImBlog} color='black' />
+                <Text fontWeight='semibold' fontSize='23' letterSpacing='2px'>
+                  BLOG
+                </Text>
+              </HStack>
             </VStack>
           </DrawerBody>
         </DrawerContent>

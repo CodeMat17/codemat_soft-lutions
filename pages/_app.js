@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps, canonical }) {
     <>
       <Seo canonical={canonical} />
       <ChakraProvider theme={theme}>
-        <NavHeader />
+       
         <Component {...pageProps} />
       </ChakraProvider>
     </>

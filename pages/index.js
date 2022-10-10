@@ -10,6 +10,7 @@ import CuratedProjects from "../components/CuratedProjects";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
+import NavHeader from "../components/NavHeader";
 import OverviewSection from "../components/OverviewSection";
 
 export default function Home() {
@@ -36,6 +37,8 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
+      <NavHeader />
       <Box pos='relative'>
         <HeroSection />
         <OverviewSection />
@@ -44,13 +47,13 @@ export default function Home() {
         <ContactUs />
         <Footer />
 
-        <VStack
+        <Box
           // border='1px'
-          p='2'
+          p='3'
           bg='green'
           rounded='full'
           pos='fixed'
-          bottom={scrollPosition > 500 ? "85px" : "20px"}
+          bottom={scrollPosition > 500 ? "100px" : "28px"}
           right={["16px", "84px"]}
           zIndex={1}>
           {/* <NextLink href='https://wa.link/98f4ao'> */}
@@ -62,16 +65,16 @@ export default function Home() {
               shadow='dark-lg'
             />
           </NextLink>
-        </VStack>
+        </Box>
 
         {scrollPosition > 500 && (
           <Link to='home' spy={true} smooth={true} offset={-80} duration={500}>
             <VStack
-              p='2'
+              p='3'
               bg='purple.700'
               rounded='full'
               pos='fixed'
-              bottom='20px'
+              bottom='28px'
               right={["16px", "84px"]}
               zIndex={1}>
               <IconButton
