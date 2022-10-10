@@ -1,8 +1,18 @@
-import { Box, IconButton, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  useColorModeValue,
+  VStack,
+} from "@chakra-ui/react";
 import Head from "next/head";
-import NextLink from "next/link";
 import { useEffect, useState } from "react";
 import { FaChevronCircleUp } from "react-icons/fa";
+import { MdOutlineMarkEmailRead, MdOutlineWifiCalling3 } from "react-icons/md";
+import { RiWechatLine } from "react-icons/ri";
 import { SiWhatsapp } from "react-icons/si";
 import { Link } from "react-scroll";
 import ContactUs from "../components/ContactUs";
@@ -14,6 +24,7 @@ import NavHeader from "../components/NavHeader";
 import OverviewSection from "../components/OverviewSection";
 
 export default function Home() {
+  const btnColor = useColorModeValue("purple.900", "white");
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -48,29 +59,48 @@ export default function Home() {
         <Footer />
 
         <Box
-          // border='1px'
-          p='3'
+          p='2'
           bg='green'
           rounded='full'
           pos='fixed'
           bottom={scrollPosition > 500 ? "100px" : "28px"}
           right={["16px", "84px"]}
           zIndex={1}>
-          {/* <NextLink href='https://wa.link/98f4ao'> */}
-          <NextLink href='https://wa.me/+2348063856120?text=Hello! CodeMat Soft-lutions'>
-            <IconButton
-              icon={<SiWhatsapp size={40} />}
-              bg='green'
-              isRound={true}
-              shadow='dark-lg'
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label='Options'
+              icon={<RiWechatLine size={40} />}
+              isRound
+              size='lg'
             />
-          </NextLink>
+            <MenuList>
+              <MenuItem
+                as='a'
+                href='tel:+2348063856120'
+                icon={<MdOutlineWifiCalling3 size={25} />}>
+                Call us
+              </MenuItem>
+              <MenuItem
+                as='a'
+                href='https://wa.me/+2348063856120?text=Hello! CodeMat Soft-lutions'
+                icon={<SiWhatsapp size={25} color='green' />}>
+                Chat with us on WhatsApp
+              </MenuItem>
+              <MenuItem
+                as='a'
+                href='mailto:codemat.biz@gmail.com?subject=Business Email'
+                icon={<MdOutlineMarkEmailRead size={25} color='tomato' />}>
+                Send an email to us
+              </MenuItem>
+            </MenuList>
+          </Menu>
         </Box>
 
         {scrollPosition > 500 && (
           <Link to='home' spy={true} smooth={true} offset={-80} duration={500}>
             <VStack
-              p='3'
+              p='2'
               bg='purple.700'
               rounded='full'
               pos='fixed'
@@ -78,9 +108,9 @@ export default function Home() {
               right={["16px", "84px"]}
               zIndex={1}>
               <IconButton
-                // size='lg'
                 icon={<FaChevronCircleUp size={40} />}
                 colorScheme='purple'
+                size='lg'
                 isRound={true}
                 shadow='dark-lg'
               />

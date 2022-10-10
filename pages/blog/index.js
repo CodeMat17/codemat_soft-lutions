@@ -37,7 +37,7 @@ export const getStaticProps = async () => {
   const { data: blogPosts } = await supabase
     .from("blogPosts")
     .select("*")
-    .order("id", true);
+    .order("id", {ascending: false});
 
   return {
     props: {

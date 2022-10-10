@@ -17,7 +17,7 @@ function BlogCard({ title, content, created_at }) {
   const color = useColorModeValue("gray.700", "");
 
   return (
-    <Box>
+    <Box mb='8'>
       <Text fontWeight='bold' fontSize={["2xl", "3xl"]} maxW='md'>
         {title}
       </Text>
