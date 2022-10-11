@@ -13,7 +13,7 @@ function BlogPost({ posts }) {
       <BlogNav />
       <Box px={[4, 4, 8]} py='8' maxW='6xl' mx='auto'>
         <Heading size={["2xl", "3xl", "4xl"]} maxW='2xl'>
-          Welcome to our blog channel
+          Welcome to our blog channel.
         </Heading>
         <HStack mt='12' mb='6' align='start' justify='space-between'>
           <Box pb='8'>
