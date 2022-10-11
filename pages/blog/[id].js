@@ -62,7 +62,7 @@ export const getStaticProps = async ({ params: { id } }) => {
   const { data: blogPost } = await supabase
     .from("blogPosts")
     .select("*")
-    .eq("id", id)
+    .match({id})
     .single();
 
   if (!blogPost) {
