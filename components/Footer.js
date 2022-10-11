@@ -84,7 +84,7 @@ function Footer() {
                 </HStack>
                 <HStack>
                   <FiPhoneCall size='16' />
-                  <Text fontSize='sm'>08063856120</Text>
+                  <Text fontSize='sm'>2349125435257</Text>
                 </HStack>
               </VStack>
             </VStack>

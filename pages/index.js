@@ -77,7 +77,7 @@ export default function Home() {
             <MenuList>
               <MenuItem
                 as='a'
-                href='tel:+2348063856120'
+                href='tel:+2349125435257'
                 icon={<MdOutlineWifiCalling3 size={25} />}>
                 Call us
               </MenuItem>
