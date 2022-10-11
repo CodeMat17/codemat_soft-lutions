@@ -17,17 +17,70 @@ import Footer from "../../components/Footer";
 import { supabase } from "../../utils/supabaseClient";
 dayjs.extend(relativeTime);
 
-function BlogDetail({ post }) {
+const DEFAULT_OG_IMAGE =
+  "https://res.cloudinary.com/mctony17/image/upload/v1665089325/Soft-lutions/Seo/logo.png";
+
+
+function BlogDetail({ post, ogImage = DEFAULT_OG_IMAGE }) {
   const bg = useColorModeValue("purple.50", "");
 
   return (
     <div>
-      <Head>
+      <Head key={post.id}>
         <title>CodeMat Soft-lutions | Blog Page</title>
         <meta
           name='description'
-          content='At CodeMat soft-lutions blog page, we write articles about websites and other software solutions such as eCommerce, school management, hotel management etc.'
+          content='CodeMat soft-lutions blog page. We write about websites and software solutions etc.'
         />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={post.title} />
+        <meta property='og:description' content={post.desc} />
+        <meta key='og_locale' property='og:locale' content='en_IE' />
+        <meta
+          key='og_site_name'
+          property='og:site_name'
+          content='CodeMat Soft-lutions'
+        />
+        <meta
+          property='og:url'
+          content={`https://www.soft-lutions.com.ng/blog/${post.id}`}
+        />
+
+        <meta
+          key='og_image'
+          property='og:image'
+          content={ogImage ?? DEFAULT_OG_IMAGE}
+        />
+        <meta key='og_image:alt' property='og:image:alt' content='logo' />
+        <meta key='og_image:width' property='og:image:width' content='300' />
+        <meta key='og_image:height' property='og:image:height' content='300' />
+
+        <meta name='robots' content='index,follow' />
+
+        <meta
+          key='twitter:card'
+          name='twitter:card'
+          content='summary_large_image'
+        />
+        <meta key='twitter:site' name='twitter:site' content='@Soft_lutions' />
+        <meta
+          key='twitter:creator'
+          name='twitter:creator'
+          content='@Soft_lutions'
+        />
+        <meta
+          key='twitter:title'
+          property='twitter:title'
+          content='CodeMat Soft-lutions'
+        />
+        <meta
+          key='twitter:description'
+          property='twitter:description'
+          content={post.desc}
+        />
+
+        <link rel='canonical' href='https://www.soft-lutions.com.ng' />
+
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

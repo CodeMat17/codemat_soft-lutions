@@ -23,7 +23,11 @@ import HeroSection from "../components/HeroSection";
 import NavHeader from "../components/NavHeader";
 import OverviewSection from "../components/OverviewSection";
 
-export default function Home() {
+const DOMAIN = "https://www.soft-lutions.com.ng";
+const DEFAULT_OG_IMAGE =
+  "https://res.cloudinary.com/mctony17/image/upload/v1665089325/Soft-lutions/Seo/logo.png";
+
+export default function Home({ ogImage = DEFAULT_OG_IMAGE }) {
   const btnColor = useColorModeValue("purple.900", "white");
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
@@ -46,6 +50,55 @@ export default function Home() {
           name='description'
           content='CodeMat soft-lutions is a software solutions company that specializes in building sleek mobile web websites and applications like ecommerce apps etc.'
         />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='CodeMat Soft-lutions' />
+        <meta
+          property='og:description'
+          content='CodeMat soft-lutions is a software solutions company that specializes in building sleek mobile web websites and applications like ecommerce apps etc.'
+        />
+        <meta key='og_locale' property='og:locale' content='en_IE' />
+        <meta
+          key='og_site_name'
+          property='og:site_name'
+          content='CodeMat Soft-lutions'
+        />
+        <meta property='og:url' content='https://www.soft-lutions.com.ng/' />
+
+        <meta
+          key='og_image'
+          property='og:image'
+          content={ogImage ?? DEFAULT_OG_IMAGE}
+        />
+        <meta key='og_image:alt' property='og:image:alt' content='logo' />
+        <meta key='og_image:width' property='og:image:width' content='300' />
+        <meta key='og_image:height' property='og:image:height' content='300' />
+
+        <meta name='robots' content='index,follow' />
+
+        <meta
+          key='twitter:card'
+          name='twitter:card'
+          content='summary_large_image'
+        />
+        <meta key='twitter:site' name='twitter:site' content='@Soft_lutions' />
+        <meta
+          key='twitter:creator'
+          name='twitter:creator'
+          content='@Soft_lutions'
+        />
+        <meta
+          key='twitter:title'
+          property='twitter:title'
+          content='CodeMat Soft-lutions'
+        />
+        <meta
+          key='twitter:description'
+          property='twitter:description'
+          content='CodeMat soft-lutions is a software solutions company that specializes in building sleek mobile web websites and applications like ecommerce apps etc.'
+        />
+
+        <link rel='canonical' href='https://www.soft-lutions.com.ng' />
+
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
