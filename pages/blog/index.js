@@ -5,7 +5,7 @@ import BlogNav from "../../components/BlogNav";
 import BlogSocialLinks from "../../components/BlogSocialLinks";
 import { supabase } from "../../utils/supabaseClient";
 
-function BlogPost({ blogPosts }) {
+function BlogPost({ posts }) {
   const bg = useColorModeValue("purple.50", "");
 
   return (
@@ -17,11 +17,11 @@ function BlogPost({ blogPosts }) {
         </Heading>
         <HStack mt='12' mb='6' align='start' justify='space-between'>
           <Box pb='8'>
-            {blogPosts &&
-              blogPosts.map((blog) => (
-                <Link href={`/blog/${blog.id}`} key={blog.id}>
+            {posts &&
+              posts.map((post) => (
+                <Link href={`/blog/${post.id}`} key={post.id}>
                   <a>
-                    <BlogCard {...blog} />
+                    <BlogCard {...post} />
                   </a>
                 </Link>
               ))}
@@ -34,17 +34,17 @@ function BlogPost({ blogPosts }) {
 }
 
 export const getStaticProps = async () => {
-  const { data: blogPosts } = await supabase
-    .from("blogPosts")
+  const { data: posts } = await supabase
+    .from("posts")
     .select("*")
-    .order("id", {ascending: false});
+    .order("created_at", { ascending: false });
 
   return {
     props: {
-      blogPosts,
+      posts,
     },
-    revalidate: 60
+    revalidate: 86400,
   };
-}
+};
 
 export default BlogPost;

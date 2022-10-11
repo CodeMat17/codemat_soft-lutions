@@ -16,7 +16,7 @@ import Footer from "../../components/Footer";
 import { supabase } from "../../utils/supabaseClient";
 dayjs.extend(relativeTime);
 
-function BlogDetail({ blogPost }) {
+function BlogDetail({ post }) {
   const bg = useColorModeValue("purple.50", "");
 
   return (
@@ -25,16 +25,16 @@ function BlogDetail({ blogPost }) {
 
       <HStack my='6' align='start' justify='space-between' maxW='6xl' mx='auto'>
         <Box pb='8' px='4' maxW='xl'>
-          <Heading size={["xl", "2xl"]}>{blogPost?.title}</Heading>
+          <Heading size={["xl", "2xl"]}>{post?.title}</Heading>
           <HStack pb='6' fontSize='sm' color='gray' spacing='2' mt='2'>
             <Icon as={HiOutlineNewspaper} />
             <Text>
-              Published {dayjs(blogPost?.created_at).format("MMM D, YYYY")}
+              Published {dayjs(post?.created_at).format("MMM D, YYYY")}
             </Text>
             <Text>-</Text>
-            <Text>{dayjs(blogPost?.created_at).fromNow()}</Text>
+            <Text>{dayjs(post?.created_at).fromNow()}</Text>
           </HStack>
-          <ReactMarkdown>{blogPost?.content}</ReactMarkdown>
+          <ReactMarkdown>{post?.content}</ReactMarkdown>
         </Box>
         <BlogSocialLinks />
       </HStack>
@@ -45,10 +45,11 @@ function BlogDetail({ blogPost }) {
 }
 
 export const getStaticPaths = async () => {
-  const { data: blogPosts } = await supabase.from("blogPosts").select("id");
-  const paths = blogPosts.map(({ id }) => ({
+  const { data: posts } = await supabase.from("posts").select("id");
+  const paths = posts.map(({ id }) => ({
     params: {
-      id: id.toString(),
+      // id: id.toString(),
+      id,
     },
   }));
 
@@ -59,13 +60,13 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { id } }) => {
-  const { data: blogPost } = await supabase
-    .from("blogPosts")
+  const { data: post } = await supabase
+    .from("posts")
     .select("*")
     .match({id})
     .single();
 
-  if (!blogPost) {
+  if (!post) {
     return {
       notFound: true,
     };
@@ -73,9 +74,9 @@ export const getStaticProps = async ({ params: { id } }) => {
 
   return {
     props: {
-      blogPost,
+      post,
     },
-    revalidate: 60,
+    revalidate: 86400,
   };
 };
 
