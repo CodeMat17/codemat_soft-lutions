@@ -30,7 +30,7 @@ function Footer() {
                 Connect With Us
               </Text>
               <HStack spacing='2' pr='4'>
-                <Link href='https://www.facebook.com/profile.php?id=100086487794710'>
+                <Link href='https://web.facebook.com/?sk=welcome&_rdc=10&_rdr'>
                   <a>
                     <IconButton
                       _hover={{ bg: "purple.800" }}
