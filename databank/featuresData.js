@@ -5,7 +5,7 @@ export const features = [
     svg: "/feature-1.svg",
     title: "24/7 Online Presence",
     content:
-      "A website for yourself or business means your clients / customers can always find and contact you 24/7 even after your business hours.",
+      "A website for yourself or business means your clients or customers can always find and contact you 24/7 even after your business hours.",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const features = [
     svg: "/seo.svg",
     title: "Advertising",
     content:
-      "A website like ours with perfect Search Engine Optimization, SEO, increases the awareness and visibility of your goods and/or services to a wide range of clients a million times faster than with the traditional offline advertising methods.",
+      "A website like ours with perfect Search Engine Optimization, SEO, increases the awareness and visibility of your goods or services to a wide range of clients a million times faster than with the traditional offline advertising methods.",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const features = [
     svg: "/competition.svg",
     title: "Competition",
     content:
-      "If you do not have a website for your goods and/or services, it is likely that your competitor does, that means that you are missing out on gaining new customers and your competitor with more customers will definitely gain more than you do.",
+      "If you do not have a website for your goods or services, it is likely that your competitor does, that means you are missing out on gaining new customers and your competitor with more customers will definitely gain more than you do in the business.",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const features = [
     svg: "/interaction.svg",
     title: "Interaction",
     content:
-      "A perfect website like ours makes interaction with clients very easy. In business, clients questions and quick replies are essential. This encourages good customer relations in the long run and the positive feedbacks can be uploaded as testimonials which may attract more customers to you",
+      "A perfect website like ours makes interaction with clients very easy. In business, clients questions and quick replies are essential. This encourages good customer relations in the long run and the positive feedbacks can be uploaded as testimonials which may attract more customers to you.",
   },
   {
     id: 6,

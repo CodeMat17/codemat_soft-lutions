@@ -39,7 +39,7 @@ function OverviewSection() {
               within minutes. Our business at CODEMAT SOFT-LUTIONS is to help you
               create solutions that will bring your businesses to life
               satisfactorily. We pay 100% attention to SEO to ensure that your
-              goods and/or services are visible to potential clients, investors,
+              goods or services are visible to potential clients, investors,
               etc. We guarantee you of increased website traffic with our proven
               strategies and heart-to-heart customer-client conversations.
             </Text>

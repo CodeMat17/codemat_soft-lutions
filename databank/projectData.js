@@ -4,7 +4,7 @@ export const projects = [
     title: "JOTTA",
     alt: "jotta img",
     image: "/project-1.webp",
-    desc: "JOTTA is an e-note collector application.",
+    desc: "JOTTA is an e-note application.",
   },
   {
     id: 2,
@@ -18,13 +18,13 @@ export const projects = [
     title: "COOP-PAY",
     alt: "coop pay img",
     image: "/project-3.webp",
-    desc: "COOP-PAY is a payday loan app for an organization.",
+    desc: "COOP-PAY is a payday loan app.",
   },
   {
     id: 4,
     title: "PROFILE WEBSITE",
     alt: "profile landing site",
     image: "/project-4.webp",
-    desc: "PROFILE WEBSITE is an individual profile website.",
+    desc: "This is a personal profile website page.",
   },
 ];

@@ -66,7 +66,7 @@ function ContactUs() {
         CONTACT US
       </Heading>
       <Text fontSize='sm' textAlign='center' maxW='md' mx='auto'>
-        Send a message to us let&apos;s help grow and breath your dream business
+        Send a message to us let&apos;s help breath your dream business
         to life.
       </Text>
       <Container px='0' py='4' centerContent>
