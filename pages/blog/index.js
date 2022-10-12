@@ -22,6 +22,10 @@ function BlogPost({ posts, ogImage = DEFAULT_OG_IMAGE }) {
             name='description'
             content='CodeMat soft-lutions blog page. We write about websites and software solutions etc.'
           />
+          <meta
+            name='google-site-verification'
+            content='R5a6Pc8cVlDlpcajdevQ8LqeAxSvSxNxMzc0ZTTI8ns'
+          />
           <meta property='og:type' content='website' />
           <meta property='og:title' content={seoItem.title} />
           <meta

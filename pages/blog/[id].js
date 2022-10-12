@@ -78,7 +78,10 @@ function BlogDetail({ post, ogImage = DEFAULT_OG_IMAGE }) {
           property='twitter:description'
           content={post.desc}
         />
-
+        <meta
+          name='google-site-verification'
+          content='R5a6Pc8cVlDlpcajdevQ8LqeAxSvSxNxMzc0ZTTI8ns'
+        />
         <link rel='canonical' href='https://www.soft-lutions.com.ng' />
 
         <link rel='icon' href='/favicon.ico' />
