@@ -6,13 +6,18 @@ import {
   Highlight,
   Text,
   useColorModeValue,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { Link } from "react-scroll";
+import { useRef } from "react";
+
+import ModalForm from "./ModalForm";
 
 function HeroSection() {
+  const finalRef = useRef(null);
   const bg = useColorModeValue("linear(to-b, purple.900, purple.700)", "");
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box
@@ -76,11 +81,12 @@ function HeroSection() {
           Come experience SATISFACTION with our software solutions.
         </Text>
         <Flex mt='6' justify={["center", "center", "start"]}>
-          <Link to='contact' spy={true} smooth={true} offset={-80} duration={800}>
-            <Button size='lg' colorScheme='green'>
-              CONTACT US NOW
-            </Button>
-          </Link>
+          {/* <Link to='contact' spy={true} smooth={true} offset={-80} duration={800}> */}
+          <Button ref={finalRef} onClick={onOpen} size='lg' colorScheme='green'>
+            CONTACT US NOW
+          </Button>
+          <ModalForm isOpen={isOpen} onClose={onClose} finalFocusRef={finalRef} />
+          {/* </Link> */}
         </Flex>
       </Box>
     </Box>

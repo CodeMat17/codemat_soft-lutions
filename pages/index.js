@@ -20,8 +20,10 @@ import CuratedProjects from "../components/CuratedProjects";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
+import MultiLinkMenu from "../components/MultiLinkMenu";
 import NavHeader from "../components/NavHeader";
 import OverviewSection from "../components/OverviewSection";
+import ScrollBtn from "../components/ScrollBtn";
 
 const DOMAIN = "https://www.soft-lutions.com.ng";
 const DEFAULT_OG_IMAGE =
@@ -112,7 +114,6 @@ export default function Home({ ogImage = DEFAULT_OG_IMAGE }) {
         <OverviewSection />
         <Features />
         <CuratedProjects />
-        <ContactUs />
         <Footer />
 
         <Box
@@ -123,55 +124,13 @@ export default function Home({ ogImage = DEFAULT_OG_IMAGE }) {
           bottom={scrollPosition > 500 ? "100px" : "28px"}
           right={["16px", "84px"]}
           zIndex={1}>
-          <Menu>
-            <MenuButton
-              as={IconButton}
-              aria-label='Options'
-              icon={<RiWechatLine size={40} />}
-              isRound
-              size='lg'
-            />
-            <MenuList>
-              <MenuItem
-                as='a'
-                href='tel:+2349125435257'
-                icon={<MdOutlineWifiCalling3 size={25} />}>
-                Call us
-              </MenuItem>
-              <MenuItem
-                as='a'
-                href='https://wa.me/+2348063856120?text=Hello! CodeMat Soft-lutions'
-                icon={<SiWhatsapp size={25} color='green' />}>
-                Chat with us on WhatsApp
-              </MenuItem>
-              <MenuItem
-                as='a'
-                href='mailto:codemat.biz@gmail.com?subject=Business Email'
-                icon={<MdOutlineMarkEmailRead size={25} color='tomato' />}>
-                Send an email to us
-              </MenuItem>
-            </MenuList>
-          </Menu>
+          <MultiLinkMenu />
         </Box>
 
         {scrollPosition > 500 && (
           <Link to='home' spy={true} smooth={true} offset={-80} duration={500}>
-            <VStack
-              p='2'
-              bg='purple.700'
-              rounded='full'
-              pos='fixed'
-              bottom='28px'
-              right={["16px", "84px"]}
-              zIndex={1}>
-              <IconButton
-                icon={<FaChevronCircleUp size={40} />}
-                colorScheme='purple'
-                size='lg'
-                isRound={true}
-                shadow='dark-lg'
-              />
-            </VStack>
+         
+            <ScrollBtn />
           </Link>
         )}
       </Box>

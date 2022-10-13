@@ -5,16 +5,22 @@ import {
   HStack,
   IconButton,
   Text,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { BsTwitter, BsWhatsapp } from "react-icons/bs";
 import { FiInstagram, FiPhoneCall } from "react-icons/fi";
 import { GrFacebookOption } from "react-icons/gr";
 import { RiMailSendLine } from "react-icons/ri";
+import ModalForm from "./ModalForm";
 
 function Footer() {
+  const footerRef = useRef(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box bg='purple.900' pt='12' pb='6' w='100%'>
       <Box maxW='6xl' mx='auto'>
@@ -78,13 +84,29 @@ function Footer() {
                 </Link>
               </HStack>
               <VStack align='start' spacing='0' px='4' pt='8' color='gray.400'>
-                <HStack>
-                  <RiMailSendLine size='16' />
-                  <Text fontSize='sm'>codemat.biz@gmail.com</Text>
-                </HStack>
+                <Box>
+                  <HStack>
+                    <RiMailSendLine size='16' />
+                    <Text
+                      as='button'
+                      ref={footerRef}
+                      onClick={onOpen}
+                      fontSize='sm'>
+                      codemat.biz@gmail.com
+                    </Text>
+                  </HStack>
+                  <ModalForm
+                    finalFocusRef={footerRef}
+                    isOpen={isOpen}
+                    onClose={onClose}
+                  />
+                </Box>
+
                 <HStack>
                   <FiPhoneCall size='16' />
-                  <Text fontSize='sm'>2349125435257</Text>
+                  <Text as='a' href='tel:+2349125435257' fontSize='sm'>
+                    2349125435257
+                  </Text>
                 </HStack>
               </VStack>
             </VStack>

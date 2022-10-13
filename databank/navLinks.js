@@ -39,14 +39,4 @@ export const links = [
     duration: 500,
     icon: '/svg/bulb.svg'
   },
-  {
-    id: 5,
-    item: "CONTACT US",
-    to: "contact",
-    spy: true,
-    smooth: true,
-    offset: -80,
-    duration: 500,
-    icon: '/svg/megaphone.svg'
-  },
 ];

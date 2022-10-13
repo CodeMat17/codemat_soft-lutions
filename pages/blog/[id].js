@@ -26,15 +26,15 @@ function BlogDetail({ post, ogImage = DEFAULT_OG_IMAGE }) {
 
   return (
     <div>
-      <Head key={post.id}>
+      <Head key={post?.id}>
         <title>CodeMat Soft-lutions | Blog Page</title>
         <meta
           name='description'
           content='CodeMat soft-lutions blog page. We write about websites and software solutions etc.'
         />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content={post.title} />
-        <meta property='og:description' content={post.desc} />
+        <meta property='og:title' content={post?.title} />
+        <meta property='og:description' content={post?.desc} />
         <meta key='og_locale' property='og:locale' content='en_IE' />
         <meta
           key='og_site_name'
@@ -43,7 +43,7 @@ function BlogDetail({ post, ogImage = DEFAULT_OG_IMAGE }) {
         />
         <meta
           property='og:url'
-          content={`https://www.soft-lutions.com.ng/blog/${post.id}`}
+          content={`https://www.soft-lutions.com.ng/blog/${post?.id}`}
         />
 
         <meta
@@ -76,7 +76,7 @@ function BlogDetail({ post, ogImage = DEFAULT_OG_IMAGE }) {
         <meta
           key='twitter:description'
           property='twitter:description'
-          content={post.desc}
+          content={post?.desc}
         />
         <meta
           name='google-site-verification'

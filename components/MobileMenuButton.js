@@ -20,6 +20,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { ImBlog } from "react-icons/im";
 import { Link } from "react-scroll";
 import { links } from "../databank/navLinks";
+import MobileModalForm from "./MobileModalForm";
 
 function MobileMenuButton() {
   const router = useRouter();
@@ -59,7 +60,7 @@ function MobileMenuButton() {
           <DrawerCloseButton />
           {/* <DrawerHeader>Heading</DrawerHeader> */}
           <DrawerBody>
-            <VStack pt='24' w='100%' align='normal'>
+            <VStack pt='16' w='100%' align='normal'>
               {links.map((link) => (
                 <Link
                   key={link.id}
@@ -79,7 +80,14 @@ function MobileMenuButton() {
                     px='4'
                     rounded='md'
                     onClick={homeBtn}>
-                    <Image src={link.icon} width={20} height={20} priority />
+                    <Box pos='relative' w='20px' h='20px' >
+                      <Image
+                        src={link.icon}
+                        priority
+                        layout='fill'
+                        objectFit='contain'
+                      />
+                    </Box>
 
                     <Text
                       fontWeight='semibold'
@@ -90,6 +98,9 @@ function MobileMenuButton() {
                   </HStack>
                 </Link>
               ))}
+
+            <MobileModalForm />
+              
 
               <HStack
                 align='center'
@@ -102,7 +113,7 @@ function MobileMenuButton() {
                 px='4'
                 rounded='md'
                 onClick={blogBtn}>
-                <Icon as={ImBlog} color='black' />
+                <Icon as={ImBlog} w={5} h={5} color='black' />
                 <Text fontWeight='semibold' fontSize='23' letterSpacing='2px'>
                   BLOG
                 </Text>

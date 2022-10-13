@@ -7,15 +7,20 @@ import {
   Text,
   useColorModeValue,
   VStack,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { links } from "../databank/navLinks";
 import ColorModeBtn from "./ColorModeBtn";
 import DesktopNavLinks from "./DesktopNavLinks";
 import MobileMenuButton from "./MobileMenuButton";
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
+import {useRef} from 'react'
+import ModalForm from "./ModalForm";
 
 function NavHeader() {
+  const ref = useRef(null)
+  const {isOpen, onOpen, onClose} = useDisclosure()
   const router = useRouter()
   const bg = useColorModeValue("purple.900", "gray.800");
 
@@ -72,8 +77,25 @@ function NavHeader() {
             <DesktopNavLinks key={link.id} {...link} />
           ))}
 
+          
+          <Box>
+            <Button ref={ref}
+            onClick={onOpen}
+            py='4'
+            size={["xs", "xs", "xs", "md"]}
+            variant='ghost'
+            color='white'
+            _hover={{ bg: "purple.800", color: "#07f819" }}
+            letterSpacing='1px'
+            fontSize='14'>
+            CONTACT US
+            </Button>
+            <ModalForm isOpen={isOpen} onClose={onClose} finalFocusRef={ref} />
+          </Box>
+          
+
           <Button
-            onClick={() => router.push('/blog')}
+            onClick={() => router.push("/blog")}
             py='4'
             size={["xs", "xs", "xs", "md"]}
             variant='ghost'

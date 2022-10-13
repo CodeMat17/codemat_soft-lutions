@@ -1,21 +1,38 @@
 import { Box, Heading, HStack, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
+
+import { useEffect, useState } from "react";
 import BlogCard from "../../components/BlogCard";
 import BlogNav from "../../components/BlogNav";
 import BlogSocialLinks from "../../components/BlogSocialLinks";
+import ScrollBtn from "../../components/ScrollBtn";
 import { supabase } from "../../utils/supabaseClient";
+import MultiLinkMenu from "../../components/MultiLinkMenu";
 
 const DEFAULT_OG_IMAGE =
   "https://res.cloudinary.com/mctony17/image/upload/v1665089325/Soft-lutions/Seo/logo.png";
 
-
 function BlogPost({ posts, ogImage = DEFAULT_OG_IMAGE }) {
   const bg = useColorModeValue("purple.50", "");
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scrol", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      {posts.map((seoItem) => (
+      {posts?.map((seoItem) => (
         <Head key={seoItem.id}>
           <title>CodeMat Soft-lutions | Blog Page</title>
           <meta
@@ -90,7 +107,7 @@ function BlogPost({ posts, ogImage = DEFAULT_OG_IMAGE }) {
         </Head>
       ))}
 
-      <Box bg={bg} minH='100vh'>
+      <Box id='home' bg={bg} minH='100vh'>
         <BlogNav />
         <Box px={[4, 4, 8]} py='8' maxW='6xl' mx='auto'>
           <Heading size={["2xl", "3xl", "4xl"]} maxW='2xl'>
@@ -111,6 +128,28 @@ function BlogPost({ posts, ogImage = DEFAULT_OG_IMAGE }) {
           </HStack>
         </Box>
       </Box>
+
+      <Box
+        p='2'
+        bg='green'
+        rounded='full'
+        pos='fixed'
+        bottom={scrollPosition > 500 ? "100px" : "28px"}
+        right={["16px", "84px"]}
+        zIndex={1}>
+        <MultiLinkMenu />
+      </Box>
+
+      {scrollPosition > 500 && (
+        <ScrollLink
+          to='home'
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={500}>
+          <ScrollBtn />
+        </ScrollLink>
+      )}
     </div>
   );
 }
