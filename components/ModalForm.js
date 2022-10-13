@@ -61,13 +61,13 @@ function ModalForm({ isOpen, onClose, finalFocusRef }) {
         }
       );
     setIsLoadong(false);
-      e.target.reset();
-      onClose()
+    e.target.reset();
+    onClose();
   };
 
   return (
     <Modal
-      size={["xs", "sm", "md"]}
+      size={["sm", "md"]}
       isCentered
       motionPreset='slideInBottom'
       scrollBehavior='inside'
@@ -75,8 +75,10 @@ function ModalForm({ isOpen, onClose, finalFocusRef }) {
       onClose={onClose}
       finalFocusRef={finalFocusRef}>
       <ModalOverlay />
-      <ModalContent mx='4'>
-        <ModalHeader>WE ARE EXPECTING YOUR MAIL</ModalHeader>
+      <ModalContent mx='1'>
+        <ModalHeader mt='6' maxW={["300px", "400px", "500px"]}>
+          WE ARE EXPECTING YOUR MAIL
+        </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <chakra.form
