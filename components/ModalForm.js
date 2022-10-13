@@ -75,7 +75,7 @@ function ModalForm({ isOpen, onClose, finalFocusRef }) {
       onClose={onClose}
       finalFocusRef={finalFocusRef}>
       <ModalOverlay />
-      <ModalContent mx='1'>
+      <ModalContent mx='2'>
         <ModalHeader mt='6' maxW={["300px", "400px", "500px"]}>
           WE ARE EXPECTING YOUR MAIL
         </ModalHeader>
