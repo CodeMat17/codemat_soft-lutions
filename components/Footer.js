@@ -71,7 +71,7 @@ function Footer() {
                   </a>
                 </Link>
 
-                <Link href='https://wa.me/+2348063856120'>
+                <Link href='https://wa.me/+2349125435257'>
                   <a>
                     <IconButton
                       _hover={{ bg: "purple.800" }}
