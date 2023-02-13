@@ -5,13 +5,15 @@ export const projects = [
     alt: "jotta img",
     image: "/project-1.webp",
     desc: "JOTTA is an e-note application.",
+    link: "",
   },
   {
     id: 2,
-    title: "BUY HERE",
+    title: "HOODIES eSHOP",
     alt: "Buy here img",
-    image: "/project-2.webp",
-    desc: "BUY HERE is an e-commerce website.",
+    image: "/project-2-2.webp",
+    desc: "This is an e-commerce website.",
+    link: "https://hoodies-eshop.vercel.app/",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const projects = [
     alt: "coop pay img",
     image: "/project-3.webp",
     desc: "COOP-PAY is a payday loan app.",
+    link: "",
   },
   {
     id: 4,
@@ -26,5 +29,6 @@ export const projects = [
     alt: "profile landing site",
     image: "/project-4.webp",
     desc: "This is a personal profile website page.",
+    link: "",
   },
 ];
