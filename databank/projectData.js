@@ -1,11 +1,11 @@
 export const projects = [
   {
     id: 1,
-    title: "JOTTA",
-    alt: "jotta img",
-    image: "/project-1.webp",
-    desc: "JOTTA is an e-note application.",
-    link: "",
+    title: "KEN-SNAP STUDIO",
+    alt: "gallery img",
+    image: "/project-1-1.webp",
+    desc: "This is a photo gallery website.",
+    link: "https://gallery-demo-app.vercel.app/",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const projects = [
     alt: "coop pay img",
     image: "/project-3.webp",
     desc: "COOP-PAY is a payday loan app.",
-    link: "",
+    link: "#",
   },
   {
     id: 4,
@@ -29,6 +29,6 @@ export const projects = [
     alt: "profile landing site",
     image: "/project-4.webp",
     desc: "This is a personal profile website page.",
-    link: "",
+    link: "#",
   },
 ];

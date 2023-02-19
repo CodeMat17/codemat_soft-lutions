@@ -10,7 +10,7 @@ function CuratedProjectsCard({ title, alt, image, desc, link }) {
     <Box
       pos='relative'
       bg={bg}
-      w={["270px", "300px", "250px"]}
+      w={["330px", "330px", "300px"]}
       mx='auto'
       rounded='md'
       shadow='2xl'
