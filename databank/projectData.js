@@ -17,11 +17,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "COOP-PAY",
-    alt: "coop pay img",
+    title: "HULU CLONE",
+    alt: "hulu clone img",
     image: "/project-3.webp",
-    desc: "COOP-PAY is a payday loan app.",
-    link: "#",
+    desc: "This is a movie app showcasing different genre.",
+    link: "https://hulu-clone-demoapp.vercel.app/",
   },
   {
     id: 4,
