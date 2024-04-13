@@ -30,13 +30,13 @@ function MultiLinkMenu() {
         <MenuList>
           <MenuItem
             as='a'
-            href='tel:+2349125435257'
+            href='tel:+2348063856120'
             icon={<MdOutlineWifiCalling3 size={25} />}>
             Call us
           </MenuItem>
           <MenuItem
             as='a'
-            href='https://wa.me/+2349125435257?text=Hello! CodeMat Soft-lutions, I am here for business.'
+            href='https://wa.me/+2348063856120?text=Hello! CodeMat Soft-lutions, I am here for business.'
             icon={<SiWhatsapp size={25} color='green' />}>
             Chat with us on WhatsApp
           </MenuItem>
@@ -44,7 +44,7 @@ function MultiLinkMenu() {
             ref={multiRef}
             as='button'
             onClick={onOpen}
-            // href='mailto:codemat.biz@gmail.com?subject=Business Email'
+            href='mailto:ask@soft-lutions.com.ng?subject=Business Email'
             icon={<MdOutlineMarkEmailRead size={25} color='tomato' />}>
             Send an email to us
           </MenuItem>

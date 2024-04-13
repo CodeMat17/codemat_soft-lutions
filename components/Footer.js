@@ -71,7 +71,7 @@ function Footer() {
                   </a>
                 </Link>
 
-                <Link href='https://wa.me/+2349125435257'>
+                <Link href='https://wa.me/+2348063856120'>
                   <a>
                     <IconButton
                       _hover={{ bg: "purple.800" }}
@@ -104,8 +104,8 @@ function Footer() {
 
                 <HStack>
                   <FiPhoneCall size='16' />
-                  <Text as='a' href='tel:+2349125435257' fontSize='sm'>
-                    2349125435257
+                  <Text as='a' href='tel:+2348063856120' fontSize='sm'>
+                    2348063856120
                   </Text>
                 </HStack>
               </VStack>

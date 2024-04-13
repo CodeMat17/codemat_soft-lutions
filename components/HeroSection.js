@@ -56,8 +56,10 @@ function HeroSection() {
               color='gray.300'
               align={["center", "center", "start"]}
               fontSize='xl'>
-              We design and develop sleek, intuitive, dynamic and responsive
-              websites and other software solutions. With our products, our
+              We develop <strong>Ai Assistant</strong> Chat Bots and as well as,
+              sleek, intuitive, dynamic and responsive
+              <strong>websites</strong> and other{" "}
+              <strong>software solutions</strong>. With our products, our
               clients are always happy.
             </Text>
           </Box>
@@ -85,7 +87,11 @@ function HeroSection() {
           <Button ref={finalRef} onClick={onOpen} size='lg' colorScheme='green'>
             CONTACT US NOW
           </Button>
-          <ModalForm isOpen={isOpen} onClose={onClose} finalFocusRef={finalRef} />
+          <ModalForm
+            isOpen={isOpen}
+            onClose={onClose}
+            finalFocusRef={finalRef}
+          />
           {/* </Link> */}
         </Flex>
       </Box>
