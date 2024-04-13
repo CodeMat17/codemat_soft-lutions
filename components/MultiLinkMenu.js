@@ -44,7 +44,7 @@ function MultiLinkMenu() {
             ref={multiRef}
             as='button'
             onClick={onOpen}
-            href='mailto:ask@soft-lutions.com.ng?subject=Business Email'
+            // href='mailto:ask@soft-lutions.com.ng?subject=Business Email'
             icon={<MdOutlineMarkEmailRead size={25} color='tomato' />}>
             Send an email to us
           </MenuItem>
